@@ -18,17 +18,18 @@ const fifRow = document.createElement('div');
 fifRow.classList.add('fifRow');
 cont.appendChild(fifRow);
 
-const firstRus = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '='];
-const secRus = ['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\'];
-const thiRus = [];
-const fourRus = [];
-const fifRus = [];
+const firstRus = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'];
+const secRus = ['Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del'];
+const thiRus = ['CapsLock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter'];
+const fourRus = ['Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', 'Top', 'Shift'];
+const fifRus = ['Ctrl', 'Win', 'Alt', 'space', 'Alt', 'left', 'bottom', 'Ctrl'];
 
 function create(arr, row) {
   let regButt;
   for (let i = 0; i < arr.length; i++) {
     regButt = document.createElement('div');
     regButt.classList.add('regButt');
+    regButt.setAttribute('id', `${arr[i]}`);
     row.appendChild(regButt);
     regButt.innerText = arr[i];
   }
@@ -36,8 +37,7 @@ function create(arr, row) {
 }
 
 create(firstRus, firstRow);
-const backsp = document.createElement('div');
-firstRow.appendChild(backsp);
+
 
 create(secRus, secRow);
 

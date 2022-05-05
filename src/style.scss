@@ -4,81 +4,167 @@
     align-items: center;
 }
 .contain {
-    width: 80%;
+    width: 60%;
     height: 30%;
     border: solid 1px crimson;
     align-self: center;
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin: auto;
     margin-top: 15%;
-    height: 300px;
+    height: 340px;
     border-radius: 6%;
     .firstRow {
         width: 100%;
         height: 100%;
-        border: solid 1px green;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        margin-top: 5px;
 
         .regButt {
-            width: 50px;
-            height: 100%;
+            width: 58px;
+            height: 58px;
             background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15%;
         }
 
-        .backsp {
-            width: 100px;
-            height: 100%;
+        #Backspace {
+            min-width: 100px;
+            height: 58px;
             background-color: beige;
         }
+        
     }
     .secRow {
         width: 100%;
         height: 100%;
-        border: solid 1px green;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        margin-bottom: 5px;
         .regButt {
-            width: 50px;
+            width: 58px;
             height: 100%;
             background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15%;
+        }
+
+        #Tab {
+            min-width: 70px;
+            height: 100%;
+            background-color: beige;
+        }
+
+        #Del {
+            min-width: 70px;
+            height: 100%;
+            background-color: beige;
         }
     }
     .thiRow {
         width: 100%;
         height: 100%;
-        border: solid 1px green;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        margin-bottom: 5px;
+
         .regButt {
-            width: 50px;
+            width: 58px;
             height: 100%;
             background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15%;
+        }
+
+        #CapsLock {
+            min-width: 100px;
+            height: 100%;
+            background-color: beige;
+        }
+
+        #Enter {
+            min-width: 100px;
+            height: 100%;
+            background-color: beige;
         }
     }
     .fourRow {
         width: 100%;
         height: 100%;
-        border: solid 1px green;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        margin-bottom: 5px;
         .regButt {
-            width: 50px;
+            width: 58px;
             height: 100%;
             background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15%;
+        }
+
+        #Shift {
+            min-width: 100px;
+            height: 100%;
+            background-color: beige;
+        }
+
+        #Top {
+            min-width: 58px;
+            height: 100%;
+            background-color: beige;
+            color: transparent;
         }
     }
     .fifRow {
         width: 100%;
         height: 100%;
-        border: solid 1px green;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 5px;
         .regButt {
-            width: 50px;
+            width: 58px;
             height: 100%;
             background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15%;
+        }
+
+        #Ctrl {
+            min-width: 58px;
+            height: 100%;
+            background-color: beige;
+        }
+        #Win {
+            min-width: 58px;
+            height: 100%;
+            background-color: beige;
+        }
+        #Alt {
+            min-width: 58px;
+            height: 100%;
+            background-color: beige;
+        }
+        #space {
+            width: 480px;
+            height: 100%;
+            background-color: pink;
+        }
+        #left, #bottom, #right {
+            min-width: 58px;
+            height: 100%;
+            background-color: beige;
+            color: transparent;
         }
     }
 }

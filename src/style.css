@@ -9,7 +9,7 @@
 }
 
 .contain {
-  width: 80%;
+  width: 60%;
   height: 30%;
   border: solid 1px crimson;
   -ms-flex-item-align: center;
@@ -23,103 +23,221 @@
           flex-direction: column;
   margin: auto;
   margin-top: 15%;
-  height: 300px;
+  height: 340px;
   border-radius: 6%;
 }
 
 .contain .firstRow {
   width: 100%;
   height: 100%;
-  border: solid 1px green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 5px;
 }
 
 .contain .firstRow .regButt {
-  width: 50px;
-  height: 100%;
+  width: 58px;
+  height: 58px;
   background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15%;
 }
 
-.contain .firstRow .backsp {
-  width: 100px;
-  height: 100%;
+.contain .firstRow #Backspace {
+  min-width: 100px;
+  height: 58px;
   background-color: beige;
 }
 
 .contain .secRow {
   width: 100%;
   height: 100%;
-  border: solid 1px green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 5px;
 }
 
 .contain .secRow .regButt {
-  width: 50px;
+  width: 58px;
   height: 100%;
   background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15%;
+}
+
+.contain .secRow #Tab {
+  min-width: 70px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .secRow #Del {
+  min-width: 70px;
+  height: 100%;
+  background-color: beige;
 }
 
 .contain .thiRow {
   width: 100%;
   height: 100%;
-  border: solid 1px green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 5px;
 }
 
 .contain .thiRow .regButt {
-  width: 50px;
+  width: 58px;
   height: 100%;
   background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15%;
+}
+
+.contain .thiRow #CapsLock {
+  min-width: 100px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .thiRow #Enter {
+  min-width: 100px;
+  height: 100%;
+  background-color: beige;
 }
 
 .contain .fourRow {
   width: 100%;
   height: 100%;
-  border: solid 1px green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 5px;
 }
 
 .contain .fourRow .regButt {
-  width: 50px;
+  width: 58px;
   height: 100%;
   background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15%;
+}
+
+.contain .fourRow #Shift {
+  min-width: 100px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .fourRow #Top {
+  min-width: 58px;
+  height: 100%;
+  background-color: beige;
+  color: transparent;
 }
 
 .contain .fifRow {
   width: 100%;
   height: 100%;
-  border: solid 1px green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .contain .fifRow .regButt {
-  width: 50px;
+  width: 58px;
   height: 100%;
   background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15%;
+}
+
+.contain .fifRow #Ctrl {
+  min-width: 58px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .fifRow #Win {
+  min-width: 58px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .fifRow #Alt {
+  min-width: 58px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .fifRow #space {
+  width: 480px;
+  height: 100%;
+  background-color: pink;
+}
+
+.contain .fifRow #left, .contain .fifRow #bottom, .contain .fifRow #right {
+  min-width: 58px;
+  height: 100%;
+  background-color: beige;
+  color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
