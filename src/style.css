@@ -1,0 +1,125 @@
+.html {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contain {
+  width: 80%;
+  height: 30%;
+  border: solid 1px crimson;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  margin-top: 15%;
+  height: 300px;
+  border-radius: 6%;
+}
+
+.contain .firstRow {
+  width: 100%;
+  height: 100%;
+  border: solid 1px green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contain .firstRow .regButt {
+  width: 50px;
+  height: 100%;
+  background-color: aqua;
+}
+
+.contain .firstRow .backsp {
+  width: 100px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .secRow {
+  width: 100%;
+  height: 100%;
+  border: solid 1px green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contain .secRow .regButt {
+  width: 50px;
+  height: 100%;
+  background-color: aqua;
+}
+
+.contain .thiRow {
+  width: 100%;
+  height: 100%;
+  border: solid 1px green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contain .thiRow .regButt {
+  width: 50px;
+  height: 100%;
+  background-color: aqua;
+}
+
+.contain .fourRow {
+  width: 100%;
+  height: 100%;
+  border: solid 1px green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contain .fourRow .regButt {
+  width: 50px;
+  height: 100%;
+  background-color: aqua;
+}
+
+.contain .fifRow {
+  width: 100%;
+  height: 100%;
+  border: solid 1px green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contain .fifRow .regButt {
+  width: 50px;
+  height: 100%;
+  background-color: aqua;
+}
+/*# sourceMappingURL=style.css.map */
