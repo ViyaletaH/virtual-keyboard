@@ -14,6 +14,7 @@
     margin-top: 15%;
     height: 340px;
     border-radius: 6%;
+    padding: 8px;
     .firstRow {
         width: 100%;
         height: 100%;
@@ -31,7 +32,7 @@
             border-radius: 15%;
         }
 
-        #Backspace {
+        #Backspace13 {
             min-width: 100px;
             height: 58px;
             background-color: beige;
@@ -54,13 +55,13 @@
             border-radius: 15%;
         }
 
-        #Tab {
+        #Tab0 {
             min-width: 70px;
             height: 100%;
             background-color: beige;
         }
 
-        #Del {
+        #Del14 {
             min-width: 70px;
             height: 100%;
             background-color: beige;
@@ -83,13 +84,13 @@
             border-radius: 15%;
         }
 
-        #CapsLock {
+        #CapsLock0 {
             min-width: 100px;
             height: 100%;
             background-color: beige;
         }
 
-        #Enter {
+        #Enter12 {
             min-width: 100px;
             height: 100%;
             background-color: beige;
@@ -111,13 +112,19 @@
             border-radius: 15%;
         }
 
-        #Shift {
+        #Shift0 {
             min-width: 100px;
             height: 100%;
             background-color: beige;
         }
 
-        #Top {
+        #Shift12 {
+            min-width: 115px;
+            height: 100%;
+            background-color: beige;
+        }
+
+        #Top11 {
             min-width: 58px;
             height: 100%;
             background-color: beige;
@@ -140,27 +147,41 @@
             border-radius: 15%;
         }
 
-        #Ctrl {
+        #Ctrl0 {
             min-width: 58px;
             height: 100%;
             background-color: beige;
         }
-        #Win {
+
+        #Ctrl8 {
             min-width: 58px;
             height: 100%;
             background-color: beige;
         }
-        #Alt {
+
+        #Win1 {
             min-width: 58px;
             height: 100%;
             background-color: beige;
         }
-        #space {
-            width: 480px;
+        #Alt2 {
+            min-width: 58px;
+            height: 100%;
+            background-color: beige;
+        }
+        #space3 {
+            width: 420px;
             height: 100%;
             background-color: pink;
         }
-        #left, #bottom, #right {
+
+        #Alt4 {
+            min-width: 58px;
+            height: 100%;
+            background-color: beige;
+        }
+
+        #left5, #bottom6, #right7 {
             min-width: 58px;
             height: 100%;
             background-color: beige;

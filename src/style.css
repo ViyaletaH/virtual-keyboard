@@ -25,6 +25,7 @@
   margin-top: 15%;
   height: 340px;
   border-radius: 6%;
+  padding: 8px;
 }
 
 .contain .firstRow {
@@ -55,7 +56,7 @@
   border-radius: 15%;
 }
 
-.contain .firstRow #Backspace {
+.contain .firstRow #Backspace13 {
   min-width: 100px;
   height: 58px;
   background-color: beige;
@@ -89,13 +90,13 @@
   border-radius: 15%;
 }
 
-.contain .secRow #Tab {
+.contain .secRow #Tab0 {
   min-width: 70px;
   height: 100%;
   background-color: beige;
 }
 
-.contain .secRow #Del {
+.contain .secRow #Del14 {
   min-width: 70px;
   height: 100%;
   background-color: beige;
@@ -129,13 +130,13 @@
   border-radius: 15%;
 }
 
-.contain .thiRow #CapsLock {
+.contain .thiRow #CapsLock0 {
   min-width: 100px;
   height: 100%;
   background-color: beige;
 }
 
-.contain .thiRow #Enter {
+.contain .thiRow #Enter12 {
   min-width: 100px;
   height: 100%;
   background-color: beige;
@@ -169,13 +170,19 @@
   border-radius: 15%;
 }
 
-.contain .fourRow #Shift {
+.contain .fourRow #Shift0 {
   min-width: 100px;
   height: 100%;
   background-color: beige;
 }
 
-.contain .fourRow #Top {
+.contain .fourRow #Shift12 {
+  min-width: 115px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .fourRow #Top11 {
   min-width: 58px;
   height: 100%;
   background-color: beige;
@@ -210,31 +217,43 @@
   border-radius: 15%;
 }
 
-.contain .fifRow #Ctrl {
+.contain .fifRow #Ctrl0 {
   min-width: 58px;
   height: 100%;
   background-color: beige;
 }
 
-.contain .fifRow #Win {
+.contain .fifRow #Ctrl8 {
   min-width: 58px;
   height: 100%;
   background-color: beige;
 }
 
-.contain .fifRow #Alt {
+.contain .fifRow #Win1 {
   min-width: 58px;
   height: 100%;
   background-color: beige;
 }
 
-.contain .fifRow #space {
-  width: 480px;
+.contain .fifRow #Alt2 {
+  min-width: 58px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .fifRow #space3 {
+  width: 420px;
   height: 100%;
   background-color: pink;
 }
 
-.contain .fifRow #left, .contain .fifRow #bottom, .contain .fifRow #right {
+.contain .fifRow #Alt4 {
+  min-width: 58px;
+  height: 100%;
+  background-color: beige;
+}
+
+.contain .fifRow #left5, .contain .fifRow #bottom6, .contain .fifRow #right7 {
   min-width: 58px;
   height: 100%;
   background-color: beige;
