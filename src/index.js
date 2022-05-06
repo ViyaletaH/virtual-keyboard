@@ -24,8 +24,8 @@ cont.appendChild(fifRow);
 const firstRus = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'];
 const secRus = ['Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del'];
 const thiRus = ['CapsLock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter'];
-const fourRus = ['Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', 'Top', 'Shift'];
-const fifRus = ['Ctrl', 'Win', 'Alt', 'Space', 'Alt', 'left', 'bottom', 'right', 'Ctrl'];
+const fourRus = ['Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', 'ArrowUp', 'Shift'];
+const fifRus = ['Control', 'Meta', 'Alt', 'Space', 'Alt', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'Control'];
 
 function create(arr, row) {
   let regButt;
@@ -33,6 +33,7 @@ function create(arr, row) {
     regButt = document.createElement('div');
     regButt.classList.add('regButt');
     regButt.setAttribute('id', `${arr[i] + [i]}`);
+    regButt.setAttribute('data', `${arr[i]}`);
     row.appendChild(regButt);
     regButt.innerText = arr[i];
   }
@@ -49,7 +50,13 @@ create(fourRus, fourRow);
 
 create(fifRus, fifRow);
 
+document.onkeydown = function keySearch(event) {
+  console.log(event.key);
+  let key = document.querySelector('.regButt[data='+event.key+']');
+  key.classList.add('active');
+};
+
 const shift = document.getElementById('Shift_2');
-const shiftText = shift.innerText;
+let shiftText = shift.innerText;
 shiftText = 'Shift';
 shiftText.style.color = 'black';
