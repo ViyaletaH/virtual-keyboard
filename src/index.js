@@ -1,3 +1,6 @@
+const inp = document.createElement('textarea');
+document.body.append(inp);
+inp.classList.add('inp');
 const cont = document.createElement('div');
 document.body.append(cont);
 cont.classList.add('contain');
@@ -22,7 +25,7 @@ const firstRus = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '
 const secRus = ['Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del'];
 const thiRus = ['CapsLock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter'];
 const fourRus = ['Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', 'Top', 'Shift'];
-const fifRus = ['Ctrl', 'Win', 'Alt', 'space', 'Alt', 'left', 'bottom', 'right', 'Ctrl'];
+const fifRus = ['Ctrl', 'Win', 'Alt', 'Space', 'Alt', 'left', 'bottom', 'right', 'Ctrl'];
 
 function create(arr, row) {
   let regButt;

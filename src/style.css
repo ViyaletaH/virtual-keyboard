@@ -8,10 +8,29 @@
           align-items: center;
 }
 
+.inp {
+  margin-top: 5%;
+  margin-bottom: 0;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%;
+  height: 200px;
+  position: relative;
+  border-radius: 6%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: solid 3px goldenrod;
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+  text-align: start;
+}
+
 .contain {
   width: 60%;
   height: 30%;
   border: solid 1px crimson;
+  background-color: rgba(0, 0, 0, 0.3);
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -22,7 +41,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
-  margin-top: 15%;
+  margin-top: 10px;
   height: 340px;
   border-radius: 6%;
   padding: 8px;
@@ -241,7 +260,7 @@
   background-color: beige;
 }
 
-.contain .fifRow #space3 {
+.contain .fifRow #Space3 {
   width: 420px;
   height: 100%;
   background-color: pink;
