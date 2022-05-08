@@ -1,41 +1,179 @@
-const inp = document.createElement('textarea');
+const inp = document.createElement("textarea");
 document.body.append(inp);
-inp.classList.add('inp');
-const cont = document.createElement('div');
+inp.classList.add("inp");
+const cont = document.createElement("div");
 document.body.append(cont);
-cont.classList.add('contain');
+cont.classList.add("contain");
 
-const firstRow = document.createElement('div');
-firstRow.classList.add('firstRow');
+const firstRow = document.createElement("div");
+firstRow.classList.add("firstRow");
 cont.appendChild(firstRow);
-const secRow = document.createElement('div');
-secRow.classList.add('secRow');
+const secRow = document.createElement("div");
+secRow.classList.add("secRow");
 cont.appendChild(secRow);
-const thiRow = document.createElement('div');
-thiRow.classList.add('thiRow');
+const thiRow = document.createElement("div");
+thiRow.classList.add("thiRow");
 cont.appendChild(thiRow);
-const fourRow = document.createElement('div');
-fourRow.classList.add('fourRow');
+const fourRow = document.createElement("div");
+fourRow.classList.add("fourRow");
 cont.appendChild(fourRow);
-const fifRow = document.createElement('div');
-fifRow.classList.add('fifRow');
+const fifRow = document.createElement("div");
+fifRow.classList.add("fifRow");
 cont.appendChild(fifRow);
 
-const firstRus = ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'];
-const secRus = ['Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del'];
-const thiRus = ['CapsLock', 'ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э', 'Enter'];
-const fourRus = ['Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '.', 'ArrowUp', 'Shift'];
-const fifRus = ['Control', 'Meta', 'Alt', 'Space', 'Alt', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'Control'];
+const firstRus = [
+  { key: "ё", keyCode: 192, code: "Backquote", enKey: "`" },
+  { key: "1", keyCode: 49, code: "Digit1", enKey: "`" },
+  { key: "2", keyCode: 50, code: "Digit2", enKey: "`" },
+  { key: "3", keyCode: 51, code: "Digit3", enKey: "`" },
+  { key: "4", keyCode: 52, code: "Digit4", enKey: "`" },
+  { key: "5", keyCode: 53, code: "Digit5", enKey: "`" },
+  { key: "6", keyCode: 54, code: "Digit6", enKey: "`" },
+  { key: "7", keyCode: 55, code: "Digit7", enKey: "`" },
+  { key: "8", keyCode: 56, code: "Digit8", enKey: "`" },
+  { key: "9", keyCode: 57, code: "Digit9", enKey: "`" },
+  { key: "0", keyCode: 48, code: "Digit0", enKey: "`" },
+  { key: "-", keyCode: 189, code: "Minus", enKey: "`" },
+  { key: "=", keyCode: 187, code: "Equal", enKey: "`" },
+  { key: "Backspace", keyCode: 8, code: "Backspace", enKey: "`" },
+];
+
+const firstEn = [
+  { key: "`", keyCode: 192, code: "Backquote2" },
+  { key: "1", keyCode: 49, code: "Digit1" },
+  { key: "2", keyCode: 50, code: "Digit2" },
+  { key: "3", keyCode: 51, code: "Digit3" },
+  { key: "4", keyCode: 52, code: "Digit4" },
+  { key: "5", keyCode: 53, code: "Digit5" },
+  { key: "6", keyCode: 54, code: "Digit6" },
+  { key: "7", keyCode: 55, code: "Digit7" },
+  { key: "8", keyCode: 56, code: "Digit8" },
+  { key: "9", keyCode: 57, code: "Digit9" },
+  { key: "0", keyCode: 48, code: "Digit0" },
+  { key: "-", keyCode: 189, code: "Minus" },
+  { key: "=", keyCode: 187, code: "Equal" },
+  { key: "Backspace", keyCode: 8, code: "Backspace" },
+];
+
+const secRus = [
+  { key: "Tab", keyCode: 9, code: "Tab" },
+  { key: "й", keyCode: 81, code: "KeyQ" },
+  { key: "ц", keyCode: 87, code: "KeyW" },
+  { key: "у", keyCode: 69, code: "KeyE" },
+  { key: "к", keyCode: 82, code: "KeyR" },
+  { key: "е", keyCode: 84, code: "KeyT" },
+  { key: "н", keyCode: 89, code: "KeyY" },
+  { key: "г", keyCode: 85, code: "KeyU" },
+  { key: "ш", keyCode: 73, code: "KeyI" },
+  { key: "щ", keyCode: 79, code: "KeyO" },
+  { key: "з", keyCode: 80, code: "KeyP" },
+  { key: "х", keyCode: 219, code: "BracketLeft" },
+  { key: "ъ", keyCode: 221, code: "BracketRight" },
+  { key: "\\", keyCode: 220, code: 'Backslash' },
+  { key: "Delete", keyCode: 46, code: "Delete" },
+];
+
+const secEn = [
+  { key: "Tab", keyCode: 9, code: "Tab" },
+  { key: "q", keyCode: 81, code: "KeyQ" },
+  { key: "w", keyCode: 87, code: "KeyW" },
+  { key: "e", keyCode: 69, code: "KeyE" },
+  { key: "r", keyCode: 82, code: "KeyR" },
+  { key: "t", keyCode: 84, code: "KeyT" },
+  { key: "y", keyCode: 89, code: "KeyY" },
+  { key: "u", keyCode: 85, code: "KeyU" },
+  { key: "i", keyCode: 73, code: "KeyI" },
+  { key: "o", keyCode: 79, code: "KeyO" },
+  { key: "p", keyCode: 80, code: "KeyP" },
+  { key: "[", keyCode: 219, code: "BracketLeft" },
+  { key: "]", keyCode: 221, code: "BracketRight" },
+  { key: "\\", keyCode: 220, code: 'Backslash' },
+  { key: "Delete", keyCode: 46, code: "Delete" },
+];
+
+const thiRus = [
+  { key: "CapsLock", keyCode: 20, code: "CapsLock" },
+  { key: "ф", keyCode: 65, code: "KeyA" },
+  { key: "ы", keyCode: 83, code: "KeyS" },
+  { key: "в", keyCode: 68, code: "KeyD" },
+  { key: "а", keyCode: 70, code: "KeyF" },
+  { key: "п", keyCode: 71, code: "KeyG" },
+  { key: "р", keyCode: 72, code: "KeyH" },
+  { key: "о", keyCode: 74, code: "KeyJ" },
+  { key: "л", keyCode: 75, code: "KeyK" },
+  { key: "д", keyCode: 76, code: "KeyL" },
+  { key: "ж", keyCode: 186, code: "Semicolon" },
+  { key: "э", keyCode: 222, code: "Quote" },
+  { key: "Enter", keyCode: 13, code: "Enter" },
+];
+
+const thiEn = [
+  { key: "CapsLock", keyCode: 20, code: "CapsLock" },
+  { key: "a", keyCode: 65, code: "KeyA" },
+  { key: "s", keyCode: 83, code: "KeyS" },
+  { key: "d", keyCode: 68, code: "KeyD" },
+  { key: "f", keyCode: 70, code: "KeyF" },
+  { key: "g", keyCode: 71, code: "KeyG" },
+  { key: "h", keyCode: 72, code: "KeyH" },
+  { key: "j", keyCode: 74, code: "KeyJ" },
+  { key: "k", keyCode: 75, code: "KeyK" },
+  { key: "l", keyCode: 76, code: "KeyL" },
+  { key: ";", keyCode: 186, code: "Semicolon" },
+  { key: "'", keyCode: 222, code: "Quote" },
+  { key: "Enter", keyCode: 13, code: "Enter" },
+];
+const fourRus = [
+  { key: "Shift", keyCode: 16, code: "ShiftLeft" },
+  { key: "я", keyCode: 90, code: "KeyZ" },
+  { key: "ч", keyCode: 88, code: "KeyX" },
+  { key: "с", keyCode: 67, code: "KeyC" },
+  { key: "м", keyCode: 86, code: "KeyV" },
+  { key: "и", keyCode: 66, code: "KeyB" },
+  { key: "т", keyCode: 78, code: "KeyN" },
+  { key: "ь", keyCode: 77, code: "KeyM" },
+  { key: "б", keyCode: 188, code: "Comma" },
+  { key: "ю", keyCode: 190, code: "Period" },
+  { key: ".", keyCode: 191, code: "Slash" },
+  { key: "ArrowUp", keyCode: 38, code: "ArrowUp" },
+  { key: "Shift", keyCode: 16, code: "ShifRight" }
+];
+
+const fourEn = [
+  { key: "Shift", keyCode: 16, code: "ShiftLeft" },
+  { key: "z", keyCode: 90, code: "KeyZ" },
+  { key: "x", keyCode: 88, code: "KeyX" },
+  { key: "c", keyCode: 67, code: "KeyC" },
+  { key: "v", keyCode: 86, code: "KeyV" },
+  { key: "b", keyCode: 66, code: "KeyB" },
+  { key: "n", keyCode: 78, code: "KeyN" },
+  { key: "m", keyCode: 77, code: "KeyM" },
+  { key: ",", keyCode: 188, code: "Comma" },
+  { key: ".", keyCode: 190, code: "Period" },
+  { key: "\/", keyCode: 191, code: "Slash" },
+  { key: "ArrowUp", keyCode: 38, code: "ArrowUp" },
+  { key: "Shift", keyCode: 16, code: "ShifRight" }
+];
+const fifRus = [
+  { key: "Control", keyCode: 17, code: "ControlLeft" },
+  { key: "Meta", keyCode: 91, code: "MetaLeft" },
+  { key: "Alt", keyCode: 18, code: "AltLeft" },
+  { key: "Space", keyCode: 32, code: "Space" },
+  { key: "Alt", keyCode: 18, code: "AltRight" },
+  { key: "ArrowLeft", keyCode: 37, code: "ArrowLeft" },
+  { key: "ArrowDown", keyCode: 40, code: "ArrowDown" },
+  { key: "ArrowRight", keyCode: 39, code: "ArrowRight" },
+  { key: "Control", keyCode: 17, code: "ControlRight" }
+];
 
 function create(arr, row) {
   let regButt;
   for (let i = 0; i < arr.length; i++) {
-    regButt = document.createElement('div');
-    regButt.classList.add('regButt');
-    regButt.setAttribute('id', `${arr[i] + [i]}`);
-    regButt.setAttribute('data', `${arr[i]}`);
+    regButt = document.createElement("div");
+    regButt.classList.add("regButt");
+    regButt.setAttribute("id", `${arr[i].code}`);
+    regButt.setAttribute("data", `${arr[i].keyCode}`);
     row.appendChild(regButt);
-    regButt.innerText = arr[i];
+    regButt.innerText = arr[i].key;
   }
   row.appendChild(regButt);
 }
@@ -50,13 +188,58 @@ create(fourRus, fourRow);
 
 create(fifRus, fifRow);
 
+let checker = false;
+
 document.onkeydown = function keySearch(event) {
-  console.log(event.key);
-  let key = document.querySelector('.regButt[data='+event.key+']');
-  key.classList.add('active');
+  console.log("key: " + event.key);
+  console.log("code: " + event.code);
+  console.log("keyCode: " + event.keyCode);
+  let key = document.getElementById(`${event.code}`);
+  key.classList.add("active");
+  if (event.code == "ShiftLeft") {
+    checker = true;
+  }
+  if (event.code == "AltLeft" && checker) {
+    checker = false;
+    let elem1 = document.querySelector(".firstRow");
+    let elem2 = document.querySelector(".secRow");
+    let elem3 = document.querySelector(".thiRow");
+    let elem4 = document.querySelector(".fourRow");
+    elem1.innerHTML = "";
+    elem2.innerHTML = "";
+    elem3.innerHTML = "";
+    elem4.innerHTML = "";
+    create(firstEn, firstRow);
+    create(secEn, secRow);
+    create(thiEn, thiRow);
+    create(fourEn, fourRow);
+
+  }
+
+  if (event.code == "ContolLeft") {
+    checker = true;
+  }
+  if (event.code == "AltLeft" && checker) {
+    checker = false;
+    let elem1 = document.querySelector(".firstRow");
+    let elem2 = document.querySelector(".secRow");
+    let elem3 = document.querySelector(".thiRow");
+    let elem4 = document.querySelector(".fourRow");
+    elem1.innerHTML = "";
+    elem2.innerHTML = "";
+    elem3.innerHTML = "";
+    elem4.innerHTML = "";
+    create(firstRus, firstRow);
+    create(secRus, secRow);
+    create(thiRus, thiRow);
+    create(fourRus, fourRow);
+
+  }
+
 };
 
-const shift = document.getElementById('Shift_2');
-let shiftText = shift.innerText;
-shiftText = 'Shift';
-shiftText.style.color = 'black';
+
+// cont.onkeydown = function en(event) {
+  
+// };
+
