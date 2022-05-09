@@ -4,6 +4,9 @@ inp.classList.add("inp");
 const cont = document.createElement("div");
 document.body.append(cont);
 cont.classList.add("contain");
+const text = document.createElement("div");
+document.body.append(text);
+text.classList.add("text");
 
 const firstRow = document.createElement("div");
 firstRow.classList.add("firstRow");
@@ -187,6 +190,8 @@ create(thiRus, thiRow);
 create(fourRus, fourRow);
 
 create(fif, fifRow);
+
+text.innerText = 'Клавиатура создана в операционной системе Windows. Для переключения языка комбинация: левыe shift + alt';
 
 let result = '';
 const arrowLeft = document.getElementById('ArrowLeft');
@@ -389,6 +394,11 @@ document.onkeydown = function keySearch(event) {
     btns.forEach(btn => btn.innerText = btn.innerText.toUpperCase());
     shiftCheck = true;
   }
+
+  if (event.code == "AltLeft" && shiftCheck) {
+    btns.forEach(btn => btn.innerText = btn.innerText.toUpperCase()); 
+  }
+
   if (event.code == "AltLeft" && checker) {
     checker = false;
     let elem1 = document.querySelector(".firstRow");
