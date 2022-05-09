@@ -379,6 +379,7 @@ win.addEventListener('mouseleave', e => {
 
 let checker = false;
 let shiftCheck = false;
+let capsCheck = false;
 
 document.onkeydown = function keySearch(event) {
   document.querySelectorAll('.regButt').forEach(btn => btn.classList.remove('active'));
@@ -405,9 +406,13 @@ document.onkeydown = function keySearch(event) {
   }
 
   if (event.code == "ShiftRight") {
-    checker = true;
     btns.forEach(btn => btn.innerText = btn.innerText.toUpperCase());
     shiftCheck = true;
+  }
+
+  if (event.code == "CapsLock") {
+    capsCheck === false ? btns.forEach(btn => btn.innerText = btn.innerText.toUpperCase()) : btns.forEach(btn => btn.innerText = btn.innerText.toLowerCase());
+    capsCheck === false ? capsCheck = true : capsCheck = false;
   }
 
   if (event.code == "ContolLeft") {
