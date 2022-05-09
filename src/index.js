@@ -250,7 +250,7 @@ create(fourRus, fourRow);
 
 create(fif, fifRow);
 
-text.innerText = 'Клавиатура создана в операционной системе Windows. Для переключения языка комбинация: левыe shift + alt';
+text.innerText = 'Клавиатура создана в операционной системе Windows. Для переключения языка комбинация: левыe shift + alt. Пулл-реквест и коммиты для проверки здесь: https://github.com/ViyaletaH/virtual-keyboard/pull/1';
 
 let result = '';
 const arrowLeft = document.getElementById('ArrowLeft');
