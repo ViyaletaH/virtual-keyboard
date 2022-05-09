@@ -1,0 +1,107 @@
+.html {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.inp {
+    margin-top: 5%;
+    margin-bottom: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    height: 200px;
+    position: relative;
+    border-radius: 6%;
+    overflow-y: auto;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    border: solid 3px goldenrod;
+    color: #fff;
+    font-weight: 600;
+    outline:none;
+    resize: none;
+
+}
+
+.contain {
+    width: 60%;
+    height: 30%;
+    border: solid 1px crimson;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    height: 340px;
+    border-radius: 6%;
+    padding: 8px;
+   
+}
+
+.firstRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.regButt {
+    width: 58px;
+    height: 58px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;   
+}
+
+.regButt:hover {
+    cursor: pointer;
+}
+
+.regButt:active {
+    background-color: rgb(250, 250, 130);
+    cursor: pointer;
+}
+
+.secRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+    
+}
+
+.thiRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+}
+
+.fourRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+   
+}
+
+.fifRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;   
+}
+
+.active {
+    background-color: rgb(250, 250, 130);
+}
