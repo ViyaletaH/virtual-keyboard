@@ -69,7 +69,7 @@ const secRus = [
   { key: "з", keyCode: 80, code: "KeyP" },
   { key: "х", keyCode: 219, code: "BracketLeft" },
   { key: "ъ", keyCode: 221, code: "BracketRight" },
-  { key: "\\", keyCode: 220, code: 'Backslash' },
+  { key: "\\", keyCode: 220, code: "Backslash" },
   { key: "Delete", keyCode: 46, code: "Delete" },
 ];
 
@@ -87,7 +87,7 @@ const secEn = [
   { key: "p", keyCode: 80, code: "KeyP" },
   { key: "[", keyCode: 219, code: "BracketLeft" },
   { key: "]", keyCode: 221, code: "BracketRight" },
-  { key: "\\", keyCode: 220, code: 'Backslash' },
+  { key: "\\", keyCode: 220, code: "Backslash" },
   { key: "Delete", keyCode: 46, code: "Delete" },
 ];
 
@@ -123,19 +123,19 @@ const thiEn = [
   { key: "Enter", keyCode: 13, code: "Enter" },
 ];
 const fourRus = [
-  { key: "Shift", keyCode: 16, code: "ShiftLeft" },
-  { key: "я", keyCode: 90, code: "KeyZ" },
-  { key: "ч", keyCode: 88, code: "KeyX" },
-  { key: "с", keyCode: 67, code: "KeyC" },
-  { key: "м", keyCode: 86, code: "KeyV" },
-  { key: "и", keyCode: 66, code: "KeyB" },
-  { key: "т", keyCode: 78, code: "KeyN" },
-  { key: "ь", keyCode: 77, code: "KeyM" },
-  { key: "б", keyCode: 188, code: "Comma" },
-  { key: "ю", keyCode: 190, code: "Period" },
-  { key: ".", keyCode: 191, code: "Slash" },
-  { key: "ArrowUp", keyCode: 38, code: "ArrowUp" },
-  { key: "Shift", keyCode: 16, code: "ShifRight" }
+  { key: "Shift", enKey: "Shift", keyCode: 16, code: "ShiftLeft" },
+  { key: "я", enKey: "Shift", keyCode: 90, code: "KeyZ" },
+  { key: "ч", enKey: "Shift", keyCode: 88, code: "KeyX" },
+  { key: "с", enKey: "Shift", keyCode: 67, code: "KeyC" },
+  { key: "м",  enKey: "Shift", keyCode: 86, code: "KeyV" },
+  { key: "и", enKey: "Shift", keyCode: 66, code: "KeyB" },
+  { key: "т", enKey: "Shift", keyCode: 78, code: "KeyN" },
+  { key: "ь", enKey: "Shift", keyCode: 77, code: "KeyM" },
+  { key: "б", enKey: "Shift", keyCode: 188, code: "Comma" },
+  { key: "ю", enKey: "Shift", keyCode: 190, code: "Period" },
+  { key: ".", enKey: "Shift", keyCode: 191, code: "Slash" },
+  { key: "ArrowUp", enKey: "Shift", keyCode: 38, code: "ArrowUp" },
+  { key: "Shift", enKey: "Shift", keyCode: 16, code: "ShifRight" },
 ];
 
 const fourEn = [
@@ -149,11 +149,11 @@ const fourEn = [
   { key: "m", keyCode: 77, code: "KeyM" },
   { key: ",", keyCode: 188, code: "Comma" },
   { key: ".", keyCode: 190, code: "Period" },
-  { key: "\/", keyCode: 191, code: "Slash" },
+  { key: "/", keyCode: 191, code: "Slash" },
   { key: "ArrowUp", keyCode: 38, code: "ArrowUp" },
-  { key: "Shift", keyCode: 16, code: "ShifRight" }
+  { key: "Shift", keyCode: 16, code: "ShifRight" },
 ];
-const fifRus = [
+const fif = [
   { key: "Control", keyCode: 17, code: "ControlLeft" },
   { key: "Meta", keyCode: 91, code: "MetaLeft" },
   { key: "Alt", keyCode: 18, code: "AltLeft" },
@@ -162,7 +162,7 @@ const fifRus = [
   { key: "ArrowLeft", keyCode: 37, code: "ArrowLeft" },
   { key: "ArrowDown", keyCode: 40, code: "ArrowDown" },
   { key: "ArrowRight", keyCode: 39, code: "ArrowRight" },
-  { key: "Control", keyCode: 17, code: "ControlRight" }
+  { key: "Control", keyCode: 17, code: "ControlRight" },
 ];
 
 function create(arr, row) {
@@ -186,14 +186,79 @@ create(thiRus, thiRow);
 
 create(fourRus, fourRow);
 
-create(fifRus, fifRow);
+create(fif, fifRow);
+
+const arrowLeft = document.getElementById('ArrowLeft');
+const arrowDown= document.getElementById('ArrowDown');
+const arrowRight = document.getElementById('ArrowRight');
+const arrowUp = document.getElementById('ArrowUp');
+const altLeft = document.getElementById('AltLeft');
+const altRight = document.getElementById('AltRight');
+const space = document.getElementById('Space');
+const win = document.getElementById('MetaLeft');
+const cntrlLeft = document.getElementById('ControlLeft');
+const cntrlRight = document.getElementById('ControlRight');
+const shiftLeft = document.getElementById('ShiftLeft');
+const shiftRight = document.getElementById('ShifRight');
+const enter = document.getElementById('Enter');
+const caps = document.getElementById('CapsLock');
+const del = document.getElementById('Delete');
+const tab = document.getElementById('Tab');
+const backsp = document.getElementById('Backspace');
+const btns = document.querySelectorAll('.regButt');
+
+btns.forEach(elem => elem.style.fontFamily = 'Arial, Helvetica, sans-serif');
+btns.forEach(elem => elem.style.fontSize = '14px');
+btns.forEach(elem => elem.style.color = 'violet');
+
+backsp.style.backgroundColor ='#f5f5dc';
+backsp.style.width ='70px';
+
+tab.style.backgroundColor ='#f5f5dc';
+tab.style.width ='70px'
+
+del.style.backgroundColor ='#f5f5dc';
+del.style.width ='70px';
+
+cntrlLeft.style.backgroundColor ='#f5f5dc';
+
+caps.style.backgroundColor ='#f5f5dc';
+caps.style.width ='100px';
+
+enter.style.backgroundColor ='#f5f5dc';
+enter.style.width ='100px';
+
+shiftLeft.style.backgroundColor ='#f5f5dc';
+shiftLeft.style.width ='100px';
+
+shiftRight.style.backgroundColor ='#f5f5dc';
+shiftRight.style.width ='115px';
+
+cntrlRight.style.backgroundColor ='#f5f5dc';
+
+space.style.backgroundColor = 'pink';
+space.style.width = '420px';
+
+arrowLeft.style.backgroundColor ='#f5f5dc';
+arrowLeft.style.color ='transparent';
+
+arrowRight.style.backgroundColor ='#f5f5dc';
+arrowRight.style.color ='transparent';
+
+arrowUp.style.backgroundColor ='#f5f5dc';
+arrowUp.style.color ='transparent';
+
+arrowDown.style.backgroundColor ='#f5f5dc';
+arrowDown.style.color ='transparent';
+
+altLeft.style.backgroundColor ='#f5f5dc';
+altRight.style.backgroundColor ='#f5f5dc';
+
+win.style.backgroundColor ='#f5f5dc';
 
 let checker = false;
 
 document.onkeydown = function keySearch(event) {
-  console.log("key: " + event.key);
-  console.log("code: " + event.code);
-  console.log("keyCode: " + event.keyCode);
   let key = document.getElementById(`${event.code}`);
   key.classList.add("active");
   if (event.code == "ShiftLeft") {
@@ -214,6 +279,7 @@ document.onkeydown = function keySearch(event) {
     create(thiEn, thiRow);
     create(fourEn, fourRow);
 
+  
   }
 
   if (event.code == "ContolLeft") {
@@ -238,8 +304,13 @@ document.onkeydown = function keySearch(event) {
 
 };
 
+let result = '';
+document.oninput = function keyType(event) {
+  result += event.key;
+  inp.innerText = result;
+}
+
 
 // cont.onkeydown = function en(event) {
-  
-// };
 
+// };
