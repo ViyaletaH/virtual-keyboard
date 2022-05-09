@@ -78,17 +78,14 @@
 
 .regButt:hover {
   cursor: pointer;
+  background-color: pink;
 }
 
 .regButt:active {
-  background-color: yellow;
+  background-color: rgb(255, 255, 99);
+  border-radius: 50%;
+  transition: 0.2s;
   cursor: pointer;
-}
-
-#Backspace13 {
-  min-width: 100px;
-  height: 58px;
-  background-color: beige;
 }
 
 .secRow {
@@ -103,34 +100,6 @@
   margin-bottom: 5px;
 }
 
-.regButt {
-  width: 58px;
-  height: 100%;
-  background-color: aqua;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 15%;
-}
-
-#Tab0 {
-  min-width: 70px;
-  height: 100%;
-  background-color: beige;
-}
-
-#Del14 {
-  min-width: 70px;
-  height: 100%;
-  background-color: beige;
-}
-
 .thiRow {
   width: 100%;
   height: 100%;
@@ -141,34 +110,6 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin-bottom: 5px;
-}
-
-.regButt {
-  width: 58px;
-  height: 100%;
-  background-color: aqua;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 15%;
-}
-
-#CapsLock0 {
-  min-width: 100px;
-  height: 100%;
-  background-color: beige;
-}
-
-#Enter12 {
-  min-width: 100px;
-  height: 100%;
-  background-color: beige;
 }
 
 .fourRow {
@@ -183,41 +124,6 @@
   margin-bottom: 5px;
 }
 
-.regButt {
-  width: 58px;
-  height: 100%;
-  background-color: aqua;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 15%;
-}
-
-#Shift0 {
-  min-width: 100px;
-  height: 100%;
-  background-color: beige;
-}
-
-#Shift12 {
-  min-width: 115px;
-  height: 100%;
-  background-color: beige;
-}
-
-#Top11 {
-  min-width: 58px;
-  height: 100%;
-  background-color: beige;
-  color: transparent;
-}
-
 .fifRow {
   width: 100%;
   height: 100%;
@@ -230,66 +136,9 @@
   margin-bottom: 5px;
 }
 
-.regButt {
-  width: 58px;
-  height: 100%;
-  background-color: aqua;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 15%;
-}
-
-#Ctrl0 {
-  min-width: 58px;
-  height: 100%;
-  background-color: beige;
-}
-
-#Ctrl8 {
-  min-width: 58px;
-  height: 100%;
-  background-color: beige;
-}
-
-#Win1 {
-  min-width: 58px;
-  height: 100%;
-  background-color: beige;
-}
-
-#Alt2 {
-  min-width: 58px;
-  height: 100%;
-  background-color: beige;
-}
-
-#Space3 {
-  width: 420px;
-  height: 100%;
-  background-color: pink;
-}
-
-#Alt4 {
-  min-width: 58px;
-  height: 100%;
-  background-color: beige;
-}
-
-#left5, #bottom6, #right7 {
-  min-width: 58px;
-  height: 100%;
-  background-color: beige;
-  color: transparent;
-}
-
 .active {
-  background-color: yellow;
+  background-color: rgb(255, 255, 99);
+  border-radius: 50%;
+  transition: 0.2s;
 }
 /*# sourceMappingURL=style.css.map */

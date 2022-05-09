@@ -64,7 +64,7 @@
 }
 
 .regButt:active {
-    background-color: yellow;
+    background-color: rgb(250, 250, 130);
     cursor: pointer;
 }
 
@@ -99,10 +99,9 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
-   
+    margin-bottom: 5px;   
 }
 
 .active {
-    background-color: yellow;
+    background-color: rgb(250, 250, 130);
 }

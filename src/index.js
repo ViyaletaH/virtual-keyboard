@@ -134,8 +134,8 @@ const fourRus = [
   { key: "б", enKey: "Shift", keyCode: 188, code: "Comma" },
   { key: "ю", enKey: "Shift", keyCode: 190, code: "Period" },
   { key: ".", enKey: "Shift", keyCode: 191, code: "Slash" },
-  { key: "ArrowUp", enKey: "Shift", keyCode: 38, code: "ArrowUp" },
-  { key: "Shift", enKey: "Shift", keyCode: 16, code: "ShifRight" },
+  { key: "", enKey: "Shift", keyCode: 38, code: "ArrowUp" },
+  { key: "Shift", enKey: "Shift", keyCode: 16, code: "ShiftRight" },
 ];
 
 const fourEn = [
@@ -150,8 +150,8 @@ const fourEn = [
   { key: ",", keyCode: 188, code: "Comma" },
   { key: ".", keyCode: 190, code: "Period" },
   { key: "/", keyCode: 191, code: "Slash" },
-  { key: "ArrowUp", keyCode: 38, code: "ArrowUp" },
-  { key: "Shift", keyCode: 16, code: "ShifRight" },
+  { key: "", keyCode: 38, code: "ArrowUp" },
+  { key: "Shift", keyCode: 16, code: "ShiftRight" },
 ];
 const fif = [
   { key: "Control", keyCode: 17, code: "ControlLeft" },
@@ -159,9 +159,9 @@ const fif = [
   { key: "Alt", keyCode: 18, code: "AltLeft" },
   { key: "Space", keyCode: 32, code: "Space" },
   { key: "Alt", keyCode: 18, code: "AltRight" },
-  { key: "ArrowLeft", keyCode: 37, code: "ArrowLeft" },
-  { key: "ArrowDown", keyCode: 40, code: "ArrowDown" },
-  { key: "ArrowRight", keyCode: 39, code: "ArrowRight" },
+  { key: "", keyCode: 37, code: "ArrowLeft" },
+  { key: "", keyCode: 40, code: "ArrowDown" },
+  { key: "", keyCode: 39, code: "ArrowRight" },
   { key: "Control", keyCode: 17, code: "ControlRight" },
 ];
 
@@ -188,6 +188,7 @@ create(fourRus, fourRow);
 
 create(fif, fifRow);
 
+let result = '';
 const arrowLeft = document.getElementById('ArrowLeft');
 const arrowDown= document.getElementById('ArrowDown');
 const arrowRight = document.getElementById('ArrowRight');
@@ -199,7 +200,7 @@ const win = document.getElementById('MetaLeft');
 const cntrlLeft = document.getElementById('ControlLeft');
 const cntrlRight = document.getElementById('ControlRight');
 const shiftLeft = document.getElementById('ShiftLeft');
-const shiftRight = document.getElementById('ShifRight');
+const shiftRight = document.getElementById('ShiftRight');
 const enter = document.getElementById('Enter');
 const caps = document.getElementById('CapsLock');
 const del = document.getElementById('Delete');
@@ -209,58 +210,175 @@ const btns = document.querySelectorAll('.regButt');
 
 btns.forEach(elem => elem.style.fontFamily = 'Arial, Helvetica, sans-serif');
 btns.forEach(elem => elem.style.fontSize = '14px');
-btns.forEach(elem => elem.style.color = 'violet');
+btns.forEach(elem => elem.style.color = 'darkviolet');
 
 backsp.style.backgroundColor ='#f5f5dc';
 backsp.style.width ='70px';
+backsp.addEventListener('mouseenter', e => {
+  backsp.style.backgroundColor = 'pink';
+});
+backsp.addEventListener('mouseleave', e => {
+  backsp.style.backgroundColor = '#f5f5dc';
+});
 
 tab.style.backgroundColor ='#f5f5dc';
-tab.style.width ='70px'
+tab.style.width ='70px';
+tab.addEventListener('mouseenter', e => {
+  tab.style.backgroundColor = 'pink';
+});
+tab.addEventListener('mouseleave', e => {
+  tab.style.backgroundColor = '#f5f5dc';
+});
+
 
 del.style.backgroundColor ='#f5f5dc';
 del.style.width ='70px';
+del.addEventListener('mouseenter', e => {
+  del.style.backgroundColor = 'pink';
+});
+del.addEventListener('mouseleave', e => {
+  del.style.backgroundColor = '#f5f5dc';
+});
+
 
 cntrlLeft.style.backgroundColor ='#f5f5dc';
+cntrlLeft.addEventListener('mouseenter', e => {
+  cntrlLeft.style.backgroundColor = 'pink';
+});
+cntrlLeft.addEventListener('mouseleave', e => {
+  cntrlLeft.style.backgroundColor = '#f5f5dc';
+});
+
 
 caps.style.backgroundColor ='#f5f5dc';
 caps.style.width ='100px';
+caps.addEventListener('mouseenter', e => {
+  caps.style.backgroundColor = 'pink';
+});
+caps.addEventListener('mouseleave', e => {
+  caps.style.backgroundColor = '#f5f5dc';
+});
 
 enter.style.backgroundColor ='#f5f5dc';
 enter.style.width ='100px';
+enter.addEventListener('mouseenter', e => {
+  enter.style.backgroundColor = 'pink';
+});
+enter.addEventListener('mouseleave', e => {
+  enter.style.backgroundColor = '#f5f5dc';
+});
 
 shiftLeft.style.backgroundColor ='#f5f5dc';
 shiftLeft.style.width ='100px';
+shiftLeft.addEventListener('mouseenter', e => {
+  shiftLeft.style.backgroundColor = 'pink';
+});
+shiftLeft.addEventListener('mouseleave', e => {
+  shiftLeft.style.backgroundColor = '#f5f5dc';
+});
 
 shiftRight.style.backgroundColor ='#f5f5dc';
 shiftRight.style.width ='115px';
+shiftRight.addEventListener('mouseenter', e => {
+  shiftRight.style.backgroundColor = 'pink';
+});
+shiftRight.addEventListener('mouseleave', e => {
+  shiftRight.style.backgroundColor = '#f5f5dc';
+});
 
 cntrlRight.style.backgroundColor ='#f5f5dc';
+cntrlRight.addEventListener('mouseenter', e => {
+  cntrlRight.style.backgroundColor = 'pink';
+});
+cntrlRight.addEventListener('mouseleave', e => {
+  cntrlRight.style.backgroundColor = '#f5f5dc';
+});
 
 space.style.backgroundColor = 'pink';
 space.style.width = '420px';
+space.addEventListener('mouseenter', e => {
+  space.style.backgroundColor = 'violet';
+});
+space.addEventListener('mouseleave', e => {
+  space.style.backgroundColor = 'pink';
+});
 
 arrowLeft.style.backgroundColor ='#f5f5dc';
-arrowLeft.style.color ='transparent';
+arrowLeft.style.backgroundImage = "url('https://free-png.ru/wp-content/uploads/2021/05/free-png.ru-75.png')";
+arrowLeft.style.backgroundSize = 'contain';
+arrowLeft.style.height = '58px';
+arrowLeft.style.width = '60px';
+arrowLeft.style.transform = 'rotate(90deg)';
+arrowLeft.addEventListener('mouseenter', e => {
+  arrowLeft.style.backgroundColor = 'pink';
+});
+arrowLeft.addEventListener('mouseleave', e => {
+  arrowLeft.style.backgroundColor = '#f5f5dc';
+});
 
 arrowRight.style.backgroundColor ='#f5f5dc';
-arrowRight.style.color ='transparent';
+arrowRight.style.backgroundImage = "url('https://free-png.ru/wp-content/uploads/2021/05/free-png.ru-75.png')";
+arrowRight.style.backgroundSize = 'contain';
+arrowRight.style.height = '58px';
+arrowRight.style.width = '60px';
+arrowRight.style.transform = 'rotate(270deg)';
+arrowRight.addEventListener('mouseenter', e => {
+  arrowRight.style.backgroundColor = 'pink';
+});
+arrowRight.addEventListener('mouseleave', e => {
+  arrowRight.style.backgroundColor = '#f5f5dc';
+});
 
 arrowUp.style.backgroundColor ='#f5f5dc';
-arrowUp.style.color ='transparent';
+arrowUp.style.backgroundImage = "url('https://free-png.ru/wp-content/uploads/2021/05/free-png.ru-75.png')";
+arrowUp.style.backgroundSize = 'contain';
+arrowUp.style.transform = 'rotate(180deg)';
+arrowUp.addEventListener('mouseenter', e => {
+  arrowUp.style.backgroundColor = 'pink';
+});
+arrowUp.addEventListener('mouseleave', e => {
+  arrowUp.style.backgroundColor = '#f5f5dc';
+});
 
 arrowDown.style.backgroundColor ='#f5f5dc';
-arrowDown.style.color ='transparent';
+arrowDown.style.backgroundImage = "url('https://free-png.ru/wp-content/uploads/2021/05/free-png.ru-75.png')";
+arrowDown.style.backgroundSize = 'contain';
+arrowDown.addEventListener('mouseenter', e => {
+  arrowDown.style.backgroundColor = 'pink';
+});
+arrowDown.addEventListener('mouseleave', e => {
+  arrowDown.style.backgroundColor = '#f5f5dc';
+});
 
 altLeft.style.backgroundColor ='#f5f5dc';
+altLeft.addEventListener('mouseenter', e => {
+  altLeft.style.backgroundColor = 'pink';
+});
+altLeft.addEventListener('mouseleave', e => {
+  altLeft.style.backgroundColor = '#f5f5dc';
+});
+
 altRight.style.backgroundColor ='#f5f5dc';
+altRight.addEventListener('mouseenter', e => {
+  altRight.style.backgroundColor = 'pink';
+});
+altRight.addEventListener('mouseleave', e => {
+  altRight.style.backgroundColor = '#f5f5dc';
+});
 
 win.style.backgroundColor ='#f5f5dc';
+win.addEventListener('mouseenter', e => {
+  win.style.backgroundColor = 'pink';
+});
+win.addEventListener('mouseleave', e => {
+  win.style.backgroundColor = '#f5f5dc';
+});
 
 let checker = false;
 
 document.onkeydown = function keySearch(event) {
-  let key = document.getElementById(`${event.code}`);
-  key.classList.add("active");
+  document.querySelectorAll('.regButt').forEach(btn => btn.classList.remove('active'));
+  document.getElementById(`${event.code}`).classList.add("active");
   if (event.code == "ShiftLeft") {
     checker = true;
   }
@@ -304,7 +422,11 @@ document.onkeydown = function keySearch(event) {
 
 };
 
-let result = '';
+document.onkeyup = function keySearch(event) {
+  document.getElementById(`${event.code}`).classList.remove("active");
+}
+
+
 document.oninput = function keyType(event) {
   result += event.key;
   inp.innerText = result;
