@@ -157,7 +157,7 @@ const fif = [
   { key: "Control", keyCode: 17, code: "ControlLeft" },
   { key: "Meta", keyCode: 91, code: "MetaLeft" },
   { key: "Alt", keyCode: 18, code: "AltLeft" },
-  { key: "Space", keyCode: 32, code: "Space" },
+  { key: " ", keyCode: 32, code: "Space" },
   { key: "Alt", keyCode: 18, code: "AltRight" },
   { key: "", keyCode: 37, code: "ArrowLeft" },
   { key: "", keyCode: 40, code: "ArrowDown" },
@@ -212,6 +212,10 @@ btns.forEach(elem => elem.style.fontFamily = 'Arial, Helvetica, sans-serif');
 btns.forEach(elem => elem.style.fontSize = '14px');
 btns.forEach(elem => elem.style.color = 'darkviolet');
 
+btns.forEach(btn => btn.addEventListener('click', () => {
+  result += btn.innerText;
+  inp.innerText = result;
+})); 
 backsp.style.backgroundColor ='#f5f5dc';
 backsp.style.width ='70px';
 backsp.addEventListener('mouseenter', e => {
@@ -248,7 +252,6 @@ cntrlLeft.addEventListener('mouseenter', e => {
 cntrlLeft.addEventListener('mouseleave', e => {
   cntrlLeft.style.backgroundColor = '#f5f5dc';
 });
-
 
 caps.style.backgroundColor ='#f5f5dc';
 caps.style.width ='100px';
@@ -375,12 +378,15 @@ win.addEventListener('mouseleave', e => {
 });
 
 let checker = false;
+let shiftCheck = false;
 
 document.onkeydown = function keySearch(event) {
   document.querySelectorAll('.regButt').forEach(btn => btn.classList.remove('active'));
   document.getElementById(`${event.code}`).classList.add("active");
   if (event.code == "ShiftLeft") {
     checker = true;
+    btns.forEach(btn => btn.innerText = btn.innerText.toUpperCase());
+    shiftCheck = true;
   }
   if (event.code == "AltLeft" && checker) {
     checker = false;
@@ -395,9 +401,13 @@ document.onkeydown = function keySearch(event) {
     create(firstEn, firstRow);
     create(secEn, secRow);
     create(thiEn, thiRow);
-    create(fourEn, fourRow);
+    create(fourEn, fourRow); 
+  }
 
-  
+  if (event.code == "ShiftRight") {
+    checker = true;
+    btns.forEach(btn => btn.innerText = btn.innerText.toUpperCase());
+    shiftCheck = true;
   }
 
   if (event.code == "ContolLeft") {
@@ -424,6 +434,8 @@ document.onkeydown = function keySearch(event) {
 
 document.onkeyup = function keySearch(event) {
   document.getElementById(`${event.code}`).classList.remove("active");
+  shiftCheck == true ? btns.forEach(btn => btn.innerText = btn.innerText.toLowerCase()) : shiftCheck = false;
+  shiftCheck = false;
 }
 
 
@@ -433,6 +445,3 @@ document.oninput = function keyType(event) {
 }
 
 
-// cont.onkeydown = function en(event) {
-
-// };
